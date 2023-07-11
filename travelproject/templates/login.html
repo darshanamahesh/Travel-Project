@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <h1 style="color:white;"> Login Page</h1>
+</head>
+<body style="background-image:url('{% static 'images/login.jpg' %}');background-size: 100%;text-align:center;">
+<form action="login" method="post">
+    {% csrf_token %}
+     <input type="text" name="username" placeholder="Enter your username"><br>
+     <input type="password" name="password" placeholder="Enter your password"><br>
+    <input type="submit">
+</form>
+
+</body>
+</html>
